@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Major+Mono+Display&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Orbitron:wght@400..900&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.title {
+    font-family: 'Lilita One', sans-serif;
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #f0f0f0;
+
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin: 0 auto;
+    gap: 5px;
+}
+
+.score-items {
+    font-family: 'Major Mono Display', monospace;
+    background-color: #16e986;
+    color: #000000;
+    font-weight: 900;
+    border-radius: 10px
+}
+
+.score-items-2 {
+    background-color: #ff2db9;
+}
+
+.score-items-3 {
+    background-color: #ade01e;
+}
+
+.message {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.2rem;
+    font-family: "Bungee Spice", cursive;
+    font-style: normal;
+}
+
+#game {
+    text-align: center;
+}
+
+#board {
+    display: none;
+    /* Asegúrate de que por defecto esté oculto */
+    grid-template-columns: repeat(3, 100px);
+    margin: 20px auto;
+    gap: 10px;
+}
+
+#board.visible {
+    display: grid;
+    /* Usa esta clase para mostrar el tablero */
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #f0f0f0;
+    border: 3px solid #16e986;
+    border-radius: 8px;
+    font-size: 4vw;
+    font-family: 'Orbitron', sans-serif;
+    box-shadow: 0 0 8px rgba(221, 237, 238, 0.952);
+}
+
+
+/* .cell.cell-0 {
+    border-right: 4px solid #00ff00;
+    border-bottom: 4px solid #00ff00;
+}
+
+.cell.cell-1 {
+    border-bottom: 4px solid #00ff00;
+}
+
+.cell.cell-2 {
+    border-left: 4px solid #00ff00;
+    border-bottom: 4px solid #00ff00;
+}
+
+.cell.cell-3 {
+    border-right: 4px solid #00ff00;
+}
+
+.cell.cell-5 {
+    border-left: 4px solid #00ff00;
+}
+
+.cell.cell-6 {
+    border-right: 4px solid #00ff00;
+    border-top: 4px solid #00ff00;
+}
+
+.cell.cell-7 {
+    border-top: 4px solid #00ff00;
+}
+
+.cell.cell-8 {
+    border-left: 4px solid #00ff00;
+    border-top: 4px solid #00ff00;
+} */
+
+.hidden {
+    display: none;
+}
+
+#status {
+    margin: 20px 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+.shadow__btn {
+    padding: 20px 15px;
+    width: 150px;
+    border: none;
+    color: #fff;
+    border-radius: 7px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+    transition-property: box-shadow;
+    margin: 5px;
+}
+
+.shadow__btn {
+    background: rgb(0, 140, 255);
+    box-shadow: 0 0 25px rgb(0, 140, 255);
+}
+
+.shadow__btn:hover {
+    box-shadow: 0 0 5px rgb(0, 140, 255),
+        0 0 25px rgb(0, 140, 255),
+        0 0 50px rgb(0, 140, 255),
+        0 0 100px rgb(0, 140, 255);
+}
+
+.shadow__btn__2 {
+    background: rgb(113, 17, 223);
+    box-shadow: 0 0 25px rgb(103, 41, 248);
+}
+
+.shadow__btn__2:hover {
+    box-shadow: 0 0 5px rgb(72, 6, 255),
+        0 0 25px rgb(129, 77, 248),
+        0 0 50px rgb(103, 41, 248),
+        0 0 100px rgb(103, 41, 248);
+}
+
+.shadow__btn__3 {
+    background: rgb(32, 190, 66);
+    box-shadow: 0 0 25px rgb(16, 189, 16);
+}
+
+.shadow__btn__3:hover {
+    box-shadow: 0 0 5px rgb(34, 194, 106),
+        0 0 25px rgb(0, 255, 213),
+        0 0 50px rgb(51, 211, 131),
+        0 0 100px rgb(31, 192, 93);
+}
+
+.shadow__btn__4 {
+    background: rgb(206, 20, 20);
+    box-shadow: 0 0 25px rgb(255, 0, 0);
+}
+
+.shadow__btn__4:hover {
+    box-shadow: 0 0 5px rgb(255, 0, 0),
+        0 0 25px rgb(255, 0, 0),
+        0 0 50px rgb(255, 0, 0),
+        0 0 100px rgb(255, 0, 0);
+}
+
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/*  Botones  */
+.button {
+    padding: 10px;
+    text-align: center;
+    width: 7.2em;
+    height: 2.5em;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+    transition: 400ms;
+}
+
+/* Estilos específicos para el botón de GitHub */
+.btn_github {
+    background-color: #181717;
+    outline: 3px #181717 solid;
+    outline-offset: -3px;
+}
+
+.btn_github .text {
+    color: white;
+    font-weight: 700;
+    transition: 400ms;
+}
+
+.btn_github svg path {
+    transition: 400ms;
+}
+
+.btn_github:hover {
+    background-color: #1a042279;
+    outline: 3px #8612f367 solid;
+}
+
+.btn_github:hover .text {
+    color: #f8f8f8;
+}
+
+.btn_github:hover svg path {
+    fill: #ffffff;
+}
+
+/* Estilos específicos para el botón de LinkedIn */
+.btn_linked {
+    background-color: #fff;
+    border: 1px solid #0077b5;
+    position: relative;
+    font-family: 'Lilita One', sans-serif;
+    border-radius: 0.4em;
+    transition: 0.5s;
+}
+
+.btn_linked p {
+    position: absolute;
+    top: 0.4em;
+    left: 1.2em;
+    margin: 0;
+    padding: 0;
+    transition: 0.5s;
+    color: #0077b5;
+}
+
+.btn_linked svg {
+    position: absolute;
+    top: 0.45em;
+    right: 0.5em;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    transition: 0.5s;
+    height: 1em;
+    fill: #fff;
+}
+
+.btn_linked:hover p {
+    left: 0.6em;
+    color: #fff;
+}
+
+.btn_linked:hover svg {
+    opacity: 1;
+}
+
+.btn_linked:hover {
+    background-color: #0077b5;
+}
+
+
+
+/*  fondo  */
+.bg {
+    animation: slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, rgb(31, 19, 99) 50%, rgb(81, 37, 243) 50%);
+    bottom: 0;
+    left: -50%;
+    opacity: .5;
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: -1;
+}
+
+.bg2 {
+    animation-direction: alternate-reverse;
+    animation-duration: 4s;
+}
+
+.bg3 {
+    animation-duration: 5s;
+}
+
+.content {
+    background-color: rgba(27, 17, 114, 0.555);
+    border-radius: 1em;
+    box-shadow: 0 0 .25em rgba(0, 0, 0, .25);
+    box-sizing: border-box;
+    left: 50%;
+    padding: 14vmin 16vmin;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(25%);
+    }
+}
