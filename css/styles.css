@@ -85,6 +85,10 @@ body {
     box-shadow: 0 0 8px rgba(221, 237, 238, 0.952);
 }
 
+.cell:hover {
+    background-color: #16e986;
+    color: #000000;
+}
 
 /* .cell.cell-0 {
     border-right: 4px solid #00ff00;
